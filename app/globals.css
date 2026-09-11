@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 204 45% 96%;
+    --foreground: 201 55% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 201 55% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 201 55% 13%;
+    --primary: 194 72% 29%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 190 35% 90%;
+    --secondary-foreground: 201 55% 13%;
+    --muted: 204 25% 91%;
+    --muted-foreground: 201 20% 42%;
+    --accent: 172 57% 43%;
+    --accent-foreground: 201 55% 13%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 201 24% 83%;
+    --input: 201 24% 83%;
+    --ring: 194 72% 29%;
+    --radius: 1rem;
+  }
+  .dark {
+    --background: 201 55% 9%;
+    --foreground: 204 35% 94%;
+    --card: 201 48% 12%;
+    --card-foreground: 204 35% 94%;
+    --popover: 201 48% 12%;
+    --popover-foreground: 204 35% 94%;
+    --primary: 184 64% 58%;
+    --primary-foreground: 201 55% 9%;
+    --secondary: 201 35% 19%;
+    --secondary-foreground: 204 35% 94%;
+    --muted: 201 32% 17%;
+    --muted-foreground: 201 18% 70%;
+    --accent: 172 57% 43%;
+    --accent-foreground: 201 55% 9%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 201 28% 27%;
+    --input: 201 28% 27%;
+    --ring: 184 64% 58%;
+  }
+  * { @apply border-border; }
+  html { @apply bg-background; scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground; }
+  body, body * { transition: background-color 500ms ease, border-color 500ms ease, color 500ms ease, fill 500ms ease, stroke 500ms ease; }
+}
+
+::selection { background: hsl(var(--accent) / 0.25); }
+@keyframes page-slide-in {
+  from { opacity: 0; transform: translateX(2rem); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes page-slide-out {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(-2rem); }
+}
+main { animation: page-slide-in 450ms ease-out both; }
+::view-transition-old(root) { animation: page-slide-out 350ms ease-in both; }
+::view-transition-new(root) { animation: page-slide-in 450ms ease-out both; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: hsl(var(--muted)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--primary) / 0.35); border-radius: 999px; }
+
