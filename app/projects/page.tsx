@@ -3,9 +3,9 @@ import { ArrowLeft, ArrowUpRight, Github } from "lucide-react"
 import { PageTransitionLink } from "../page-transition-link"
 
 const projects = [
-  { title: "3D Model Market", type: "Web application", description: "A platform for buying and selling 3D models.", stack: ["Next.js", "TypeScript", "SQL Server"], status: "Selected work", video: "/projects/3d-model.mp4" },
-  { title: "CineBook", type: "Web application", description: "A movie ticket booking platform with a focus on user experience.", stack: ["Next.js", "Tailwind", "MongoDB"], status: "Selected work", video: "/projects/cinebook-trim.mp4", caseStudy: "/projects/cinebook-case-study.pdf" },
-  { title: "SlideMe", type: "Mobile application", description: "A mobile app for picking up and delivering your vehicles.", stack: ["React Native", "Javascript", "SQL Server"], status: "Selected work", video: "/projects/slideme.mp4", caseStudy: "/projects/slideme-case-study.pdf" },
+  { title: "3D Model Market", type: "Web application", description: "โปรเจคเดี่ยว สร้างเว็ปไซส์สำหรับ ซื้อ - ขาย โมเดล 3 มิติ ระบบสามารถรองรับการใช้งานของผู้ใช้งานได้หลายรูปแบบ พร้อมระบบหลังบ้านให้ผู้ขาย", stack: ["TypeScript", "C#", "SQL Server"], status: "Selected work", video: "/projects/3d-model.mp4" },
+  { title: "CineBook", type: "Web application", description: "โปรเจคกลุ่ม โดยได้รับหน้าที่ให้สร้าง Workflow ของผู้ใช้งานทั้ง 2 ฝั่ง พร้อมจัดการ API และ เชื่อมข้อมูลลง MongoDB", stack: ["Next.js", "JavaScript", "MongoDB"], status: "Selected work", video: "/projects/cinebook-trim.mp4", caseStudy: "/projects/cinebook-case-study.pdf" },
+  { title: "SlideMe", type: "Mobile application", description: "โปรเจคกลุ่ม โดยรับหน้าที่เป็นผู้สร้าง Workflow ของผู้ใช้งานฝั่งคนขับ ให้สามารถรับออเดอร์ และ สื่อสารกับลูกค้าภายในออเดอร์นั้นๆได้", stack: ["React", "Javascript", "SQL Server"], status: "Selected work", video: "/projects/slideme.mp4", caseStudy: "/projects/slideme-case-study.pdf" },
 ]
 
 export default function ProjectsPage() {
